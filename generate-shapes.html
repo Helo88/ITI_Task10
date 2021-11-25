@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SVG Tutorial</title>
+    <style>
+      body {
+        /* margin:100px auto; */
+        text-align: center;
+      }
+
+      .hide {
+        display: none;
+      }
+     input ,button{
+		 margin-top: 30px;
+		 background-color: lightgoldenrodyellow;
+		 border:none;
+		 padding: 5px;
+		 box-shadow: 3px 4px 3px lightsalmon ,-3px -4px 5px lightblue
+	 }
+
+ p{
+	 padding: 5px;
+	 background-color: lightgoldenrodyellow;
+	 font-weight: 800;
+	 font-size: 20px;
+ }
+      #drawing {
+		background-color: lightgoldenrodyellow;
+        width: 600px;
+        height: 100vh;
+        padding: 10px;
+		margin: 0px 50px;
+        border: 1px solid #aaaaaa;
+		overflow: hidden;
+		box-shadow:3px 4px 3px lightsalmon ,-3px -4px 5px lightblue;
+       
+      }
+      #layOut {
+		margin-top: 10px ;
+        display: flex;
+		justify-content: center;
+		align-items: center;
+	
+		/* background-color: blueviolet; */
+      }
+	 #colors{
+		  width:200px;
+		  height: 200px;
+		  flex-basis: 20%;
+	
+	  }
+	  #svgColor{
+		  width:80%;
+		  height: 200px;
+	  }
+	  a{
+		  text-decoration: none;
+	  }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard">
+		<button > <a href="./index.html"> click to visit locate-me page</a> </button>
+      <input
+        type="button"
+        value="Line"
+        class="control-btn"
+        id="ab-line"
+        onclick="drawLine()"
+      />
+	  
+      <input
+        type="button"
+        value="Rect"
+        class="control-btn"
+        id="ab-rect"
+        onclick="drawRect()"
+      />
+      <input
+        type="button"
+        value="Circle"
+        class="control-btn"
+        id="ab-circle"
+        onclick="drawCircle()"
+      />
+
+      <input
+        type="button"
+        class="dropTarget"
+        id="drag1"
+        value="eraser"
+        draggable="true"
+        width="336"
+        height="69"
+      />
+	  <input
+	  type="button"
+	  value="Clear dashboard"
+	  class="control-btn"
+	  id="ab-line"
+	  onclick="clearChilds()"
+	/>
+    </div>
+      <p >please have some patience when dragging the eraser towards the line :::)))) </p>
+    <br />
+    <div id="layOut">
+      <div id="colors">
+		  <p>change the color  from the color pallete then click on the svg and see its color change</p>
+        <input type="color" id="svgColor" />
+      </div>
+      <div id="drawing">
+		  
+	  </div>
+    </div>
+
+    <script src="js/generate-shapes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geo Location Tutorial</title>
+		<style>
+		body{
+			margin:100px auto;
+			padding: 5px;
+			width: 500px;
+			text-align: center;
+			border: 2px solid blue;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+	
+</head>
+<body>
+	<button id="get-loc" onclick="getLoc()">Get My Location </button>
+	<button > <a href="./generate-shapes.html"> click to vist generate-shapes page</a> </button>
+	<p id="message"></p>
+	<div style=" margin-bottom:3px">
+		Latitude:
+		<p style="display: inline-block"id="lat"></p>
+	</div>
+	<div>
+		Longitude:
+		<p  style="display: inline-block" id="lon"></p>
+	</div>
+
+	<div>
+		<p> press the image to view the map</p>
+		<img onclick="takeMe()" id="map" src="./earth.jpg" alt="" width="150px" height="150px" style="border-radius: 100%;">
+	</div>
+	<script src="js/locate-me.js"></script>
+</body>
+</html>
